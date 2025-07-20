@@ -1,20 +1,16 @@
 import React from "react";
 import { StyleSheet, Text, TextInput } from "react-native";
 
-export default function EmailInput({ value, onChangeText }) {
+export default function FullNameInput() {
     return (
         <>
-            <Text style={styles.label}>Email</Text>
-            <TextInput   
-                placeholder="Enter your Email"
-                value={value}
-                onChangeText={onChangeText}
+            <Text style={styles.label}>Full Name</Text>
+            <TextInput 
+                placeholder="Enter your full name"
                 style={styles.input}
-                keyboardType="email-address"
-                autoCapitalize="none"
             />
         </>
-    )   
+    )
 }
 
 const styles = StyleSheet.create({
@@ -24,7 +20,7 @@ const styles = StyleSheet.create({
     },
     input: {
         borderWidth: 1,
-        borderColor: '#ccc',
+        borderColor:'#ccc',
         borderRadius: 8,
         padding: 10,
         marginBottom: 10,

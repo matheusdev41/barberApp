@@ -85,10 +85,6 @@ export default function Login() {
             fontWeight:'bold',
             marginLeft: 2,
         },
-        label: {
-            marginBottom: 5,
-            fontWeight:'bold',
-        },
         rememberMe: {
             flexDirection: 'row',
         },
