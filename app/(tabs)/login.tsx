@@ -1,11 +1,14 @@
 import RememberMeCheckBox from '@/components/Checkbox';
+import EmailInput from '@/components/EmailInput';
+import PasswordInput from '@/components/PasswordInput';
 import { Link, useRouter } from "expo-router";
 import React, { useState } from "react";
-import { Button, Image, StyleSheet, Text, TextInput, View, } from "react-native";
+import { Button, Image, StyleSheet, Text, View } from "react-native";
 
 export default function Login() {
     const[email, setEmail] = useState('');
-    const[senha, setSenha] = useState('');
+    const[senha, setSenha] = useState(''); 
+    const[mostrarSenha, setMostrarSenha] =useState(false);
     const router = useRouter()
 
     function handleLogin() {
@@ -26,21 +29,8 @@ export default function Login() {
             <Text style={styles.title}>Welcome to BarberApp</Text>
             <Text style={styles.slogan}>Sign in to continue</Text>
             
-            <Text style={styles.label}>Email</Text>
-            <TextInput
-                placeholder="Enter your Email"
-                value={email}
-                onChangeText={setEmail}
-                style={styles.input}
-            />
-
-            <Text style={styles.label}>Password</Text>
-            <TextInput 
-                placeholder="Enter tour password"
-                value={senha}
-                onChangeText={setSenha}
-                style={styles.input}
-            />
+            <EmailInput value={email} onChangeText={setEmail} />
+            <PasswordInput value={senha} onChangeText={setSenha} />
             
             <RememberMeCheckBox />
 
