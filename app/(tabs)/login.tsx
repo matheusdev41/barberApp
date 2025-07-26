@@ -7,8 +7,7 @@ import { Button, Image, StyleSheet, Text, View } from "react-native";
 
 export default function Login() {
     const[email, setEmail] = useState('');
-    const[senha, setSenha] = useState(''); 
-    const[mostrarSenha, setMostrarSenha] =useState(false);
+    const[senha, setSenha] = useState('');
     const router = useRouter()
 
     function handleLogin() {
@@ -26,8 +25,8 @@ export default function Login() {
 
             <Image source={require('@/assets/images/barb-logo.png')} style={styles.iconLogin} />
             
-            <Text style={styles.title}>Welcome to BarberApp</Text>
-            <Text style={styles.slogan}>Sign in to continue</Text>
+            <Text style={styles.title}>Bem vindo ao BarberApp</Text>
+            <Text style={styles.slogan}>Faça o login para continuar</Text>
             
             <EmailInput value={email} onChangeText={setEmail} />
             <PasswordInput value={senha} onChangeText={setSenha} />
@@ -40,9 +39,9 @@ export default function Login() {
                 onPress={handleLogin} 
             />
             <View style={styles.row}>
-                <Text>Don't have an account?</Text>
+                <Text>Ainda não tem uma conta?</Text>
                 <Link href="/register" asChild>
-                    <Text style={styles.textRegister}>Sign Up</Text>
+                    <Text style={styles.textRegister}>Registre-se</Text>
                 </Link>
             </View>
         </View>

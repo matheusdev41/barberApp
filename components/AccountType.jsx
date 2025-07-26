@@ -3,21 +3,22 @@ import { StyleSheet, Text, View } from "react-native";
 import { Checkbox } from "react-native-paper";
 
 export default function AccountType() {
-    const[checked, setChecked] = useState(false);
+    const[checkedCliente, setCheckedCliente] = useState(false);
+    const[checkedBarbeiro, setCheckedBarbeiro] = useState(false);
     return (
         <View style={styles.container}>
                 <Checkbox 
-                    status={checked ? 'checked' : 'unchecked'}
-                    onPress={() => setChecked(!checked)}
+                    status={checkedCliente ? 'checked' : 'unchecked'}
+                    onPress={() => setCheckedCliente(!checkedCliente)}
                     color="#007bff"
                 />
-                <Text>cliente</Text>
+                <Text>Cliente</Text>
                 <Checkbox 
-                    status={checked ? 'checked' : 'unchecked'}
-                    onPress={() => setChecked(!checked)}
+                    status={checkedBarbeiro ? 'checked' : 'unchecked'}
+                    onPress={() => setCheckedBarbeiro(!checkedBarbeiro)}
                     color="#007bff"
                 />
-                <Text>Barber</Text>
+                <Text>Barbeiro</Text>
 
         </View>
     )
@@ -31,8 +32,4 @@ const styles = StyleSheet.create({
         marginTop: 5,
         marginBottom: 20,
     },
-    label: {
-        marginBotton: 5,
-        fontWeight: 'bold',
-    }
-})
+});

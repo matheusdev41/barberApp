@@ -14,10 +14,10 @@ export default function RememberMeCheckBox() {
                         onPress={() => setChecked(!checked)}
                         color="#007bff"
                     />
-                    <Text>Remember-me</Text>
+                    <Text>Lembre de mim</Text>
                 </View>
             <Link href="/changePass">
-                <Text style={styles.forgotPass}>Forgot Password?</Text>
+                <Text style={styles.forgotPass}>Esqueceu a senha?</Text>
             </Link>
             </View>   
     );
@@ -27,7 +27,7 @@ const styles = StyleSheet.create ({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center',
+        
         marginTop: 5,
         marginBottom: 20,
     },

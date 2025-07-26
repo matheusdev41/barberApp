@@ -6,7 +6,7 @@ export default function EmailInput({ value, onChangeText }) {
         <>
             <Text style={styles.label}>Email</Text>
             <TextInput   
-                placeholder="Enter your Email"
+                placeholder="Digite seu email"
                 value={value}
                 onChangeText={onChangeText}
                 style={styles.input}

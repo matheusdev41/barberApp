@@ -2,23 +2,22 @@ import { Ionicons } from '@expo/vector-icons';
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 
-
-export default function PasswordInput({ value, onChangeText }) {    
+export default function PasswordConfirm({  value, onChangeText }) {
     const [mostrarSenha, setMostrarSenha] = useState(false);
 
     return (
         <>
-            <Text style={styles.label}>Senha</Text>
+            <Text style={styles.label}>Confirme sua senha</Text>
             <View style={styles.inputWrapper}>
                 <TextInput 
-                    placeholder="Digite sua senha"
+                    placeholder="Confirme seu email"
                     value={value}
                     onChangeText={onChangeText}
                     secureTextEntry={!mostrarSenha}
-                    style={styles.input}
+                    style = {styles.input}
                 />
-                <TouchableOpacity
-                    onPress={ () => setMostrarSenha(!mostrarSenha)}
+                <TouchableOpacity 
+                    onPress ={ () => setMostrarSenha(!mostrarSenha)}
                     style={styles.iconContainer}
                 >
                     <Ionicons 
@@ -26,7 +25,7 @@ export default function PasswordInput({ value, onChangeText }) {
                         size={20}
                         color="gray"
                     />
-                </TouchableOpacity>
+                </TouchableOpacity>    
             </View>
         </>
     )
@@ -35,9 +34,9 @@ export default function PasswordInput({ value, onChangeText }) {
 const styles = StyleSheet.create({
     label: {
         marginBottom: 5,
-        fontWeight:'bold',
+        fontWeight: 'bold',
     },
-    input: {
+    input : {
         borderWidth: 1,
         borderColor: '#ccc',
         paddingRight: 8,
@@ -49,17 +48,17 @@ const styles = StyleSheet.create({
         position: 'absolute',
         right: 10,
         top: '40%',
-        transform: [{ translateY: -10 }] // Centraliza verticalmente 
+        transform: [{ translateY: -10 }]
     },
     inputWrapper: {
         position: 'relative',
-        width: '100%'
-    },  
+        width: '100%',
+    },
     container: {
         flexDirection: 'row',
         borderWidth: '#ccc',
         borderRadius: 8,
         alignItems: 'center',
         marginBottom: 10,
-    }
+    }   
 })
